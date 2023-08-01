@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 17</title>
+</head>
+
+<body>
+    <script>
+        let number1 = parseInt(prompt("Nhập số thứ nhất"));
+        let number2 = parseInt(prompt("Nhập số thứ hai"));
+        let number3 = parseInt(prompt("Nhập số thứ ba"));
+
+        console.log("3 số bạn nhập là: ", number1, number2, number3);
+        
+        if (number1 > number2 && number1 > number3) {
+            if (number2 > number3) {
+                console.log("Thứ tự giảm dần là: ", number1, number2, number3);
+            } else {
+                console.log("Thứ tự giảm dần là: ", number1, number3, number2);
+            }
+        } else if (number2 > number1 && number2 > number3) {
+            if (number1 > number3) {
+                console.log("Thứ tự giảm dần là: ", number2, number1, number3);
+            } else {
+                console.log("Thứ tự giảm dần là: ", number2, number3, number1);
+            }
+        }
+        else {
+            if (number2 > number1) {
+                console.log("Thứ tự giảm dần là: ", number3, number2, number1);
+            } else {
+                console.log("Thứ tự giảm dần là: ", number3, number1, number2);
+            }
+        }
+
+      
+      
+    </script>
+</body>
+
+</html>

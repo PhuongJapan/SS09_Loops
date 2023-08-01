@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Tàu con thoi 
+        // input
+        // -5000<=nhiên liệu<30000
+        // -1<=phi hành gia<=7 
+        // process:
+        // độ cao = 50km thì tiêu tốn 100nl*1 phi hành gia
+        // output
+        // -độ cao tối đa và số nhiên liệu còn lại
+        // B1: Nhập vào nhiên liệu và phi hành gia
+        // validate nhiên liệu: number và phi hành gia
+        // B2: Tính độ cao tối đa
+        let fuel;
+        do {
+            fuel = Number(prompt("Nhập số nguyên liệu"));
+            if (isNaN(fuel)) {
+                alert("Vui lòng nhập số");
+                
+            }else{
+                if(fuel<5000 || fuel>30000){
+                    alert("Nhap gia tri dung")
+                }else{
+                    break;
+                }
+            }
+        } while (true);
+
+        let pilot;
+        do {
+            pilot = Number(prompt("Nhập vào số phi hành gia"));
+            if(isNaN(pilot)){
+                alert("Vui lòng nhập số");
+            }else{
+                if(pilot<1||pilot>7){
+                    alert("Vui lòng nhập trong khoảng");
+
+                }else{
+                    break;
+                }
+            }
+
+        } while (true);
+
+        let fuel50km = 100*pilot;
+        let times = Math.floor(fuel/fuel50km);
+        let maxheight = times*50;
+        let fuelRemainder = fuel%fuel50km;
+        alert("Độ cao tối đa:"+maxheight+"Số nhiên liệu còn lại:"+fuelRemainder);
+
+    </script>
+</body>
+</html>

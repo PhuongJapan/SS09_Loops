@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 15</title>
+</head>
+<body>
+    <script>
+    let amount = Number(prompt("Nhập số tiền gửi"));
+    let rate = Number(prompt("Nhập lãi suất năm"));
+    let month= Number(prompt("Nhập số tháng gửi"));
+    let rateMonth = rate/12;
+    let interest=0;
+    for(let month=1; month<=12;month++){
+        interestMonth=rateMonth*amount/100;
+        amount+=interestMonth;
+        interest+=interestMonth;
+    }
+    
+    console.log("Số tiền cuối cùng nhận được là: " + amount);
+    console.log("Số tiền lãi là: " + interest);
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 12</title>
+</head>
+<body>
+    <script>
+        let number = Number(prompt("Nhập vào 1 số nguyên"));
+        let result= "";
+        let i;
+       while (number>0) {
+        i = number%10;
+        //lấy ra số cuối cùng 
+        //Vòng 1: lấy ra số đầu của số đảo ngược
+        //Vòng 2: lấy ra số tiếp theo...
+        number = Math.floor(number/10);
+        //Sau mỗi vòng lặp sẽ biến number thành số mới ko có số cuối cùng
+        //Chạy vòng lặp tiếp theo để lấy được số cuối cùng của number mới
+        result+=i;
+        //Cộng mỗi giá trị của số cuối của số number sẽ cộng chuỗi lại thành số đảo ngược
+       
+       }
+       document.write("Số đảo ngược là: " + result);
+    </script>
+</body>
+</html>
